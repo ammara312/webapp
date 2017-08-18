@@ -1,0 +1,93 @@
+// Place all the styles related to the static_pages controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+.welcome{
+	color: #bfbfbf;
+  text-shadow: 4px 4px #e4e4e4;
+  text-align: center;
+  font-family: 'Roboto', cursive,helvetica, arial, sans-serif;
+}
+
+
+.navbar{
+	background-color: black;
+}
+
+.projectname{
+	text-transform: uppercase;
+	letter-spacing: 0.5em;
+	font-family: 'Roboto', cursive,helvetica, arial, sans-serif;
+	color: #696969;
+	font-weight: 900; 
+
+}
+
+
+.navbar-default .navbar-nav>li>a {
+	text-transform: uppercase;
+	color: white;
+	text-decoration: none;
+	font-size: 14px;
+}
+
+.navbar-default .navbar-nav>li>a:hover {
+  font-size: 16px;
+  background-color: black;
+  color: white;
+}
+
+.projectname a:hover{
+	text-decoration: none;
+}
+
+.welcome h1{
+
+}
+
+#footer {
+  background-color: #121212;
+  padding-bottom: 15px;
+}
+
+footer .footer-menu {
+  padding-top: 30px;
+  font-size: 12px;
+  font-weight: 400;
+  height: 64px;
+  color: #999;
+}
+
+footer .footer-menu a {
+  color: #999;
+  font-weight: 500;
+  margin-left: 30px;
+  text-transform: uppercase;
+  -webkit-transition: all 0.2s ease;
+  transition: all 0.2s ease;
+  background: transparent;
+  outline: none;
+  text-decoration: none;
+}
+
+footer .footer-menu a:hover {
+    color: #fff;
+}
+
+.footerrow{
+  margin-right: -15px;
+  margin-left: -15px;
+  }
+
+
+
+
+@media only screen and (max-width: 500px) {
+  .navbar-default .navbar-brand, .welcome {
+    font-size: 15px;    
+  }
+
+  .pull-left, .pull-left a, .pull-right{
+    font-size: 10px;
+  }
+}
