@@ -12,21 +12,33 @@
   <% end %>
 
   <div class="field">
-    <%= form.label :name %>
+    <%= form.label :name %> <br>
     <%= form.text_field :name, id: :product_name %>
   </div>
 
-  <div class="field">
+  <div class="field"> <br>
     <%= form.label :description %>
     <%= form.text_area :description, id: :product_description %>
   </div>
 
-  <div class="field">
+  <div class="field"> <br>
     <%= form.label :image_url %>
     <%= form.text_field :image_url, id: :product_image_url %>
   </div>
+  
+  <div class="field">
+    <%= form.label :food_type %> <br>
+    <%= form.text_field :food_type, id: :product_food_type %>
+  </div>
 
-  <div class="actions">
+<div class="field">
+    <%= form.label :price %> <br>
+    <%= form.text_field :price, id: :product_price %>
+  </div>
+
+
+  <div class="actions"> <br>
     <%= form.submit %>
   </div>
+
 <% end %>

@@ -1,3 +1,44 @@
 // Place all the styles related to the products controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+.product-header, .product-style h2, p{
+
+	font-family: 'Roboto', cursive,helvetica, arial, sans-serif;
+
+}
+
+.product-style a:hover{
+	color:black;
+	text-decoration: none;
+}
+/*for text moving pattern*/
+.product-style h2{
+	font: 100 1em; 
+  animation: myAnimationName 3s ease 1s 6 alternate backwards;
+}
+@keyframes myAnimationName {
+  100% {
+    text-indent: 10%;
+  }
+}
+
+
+/*for animation */
+
+.product-header {
+	text-align: center;
+  animation: myAnimation 5s ease 1s 12 alternate forwards;
+}
+
+@keyframes myAnimation {
+  33% {
+    text-shadow: 2px 2px 2px red;
+  }
+  66% {
+    text-shadow: -2px -2px 2px blue;
+  }
+  100% {
+    text-shadow: 0px 0px 10px green;
+  }
+}
