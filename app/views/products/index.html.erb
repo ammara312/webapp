@@ -8,7 +8,7 @@
     <% @products.each do |product| %>
       <div class="col-sm-2 col-md-4 product-style">
 
-        <%= image_tag(product.image_url, class: "img-responsive") %>
+        <%= image_tag(product.image_url, class:"img-responsive") %>
 
         <a href="#"><h2><%= product.name %></h2>
         <p><%= product.description %></p>
@@ -47,6 +47,7 @@
         <td><%= link_to 'Show', product %></td>
         <td><%= link_to 'Edit', edit_product_path(product) %></td>
         <td><%= link_to 'Destroy', product, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        
       </tr>
     <% end %>
   </tbody>
