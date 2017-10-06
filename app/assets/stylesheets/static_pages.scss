@@ -23,6 +23,19 @@
 
 }
 
+.foodie {
+  word-spacing: -4em;
+  animation: foodieAnimation 1s ease 1s 1 alternate forwards;
+}
+
+@keyframes foodieAnimation {
+  50% {
+    word-spacing: 4em;
+  }
+  100% {
+    word-spacing: 0em;
+  }
+}
 
 .navbar-default .navbar-nav>li>a {
 	text-transform: uppercase;
@@ -44,6 +57,14 @@
 
 .welcome h1{
 
+}
+
+.caro-background{
+  background-color: black;
+}
+
+a.caro-hover{
+  background-color: transparent;
 }
 
 #footer {

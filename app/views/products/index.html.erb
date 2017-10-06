@@ -1,25 +1,11 @@
 <p id="notice"><%= notice %></p>
 
 <br>
-<h1 class="product-header">Products</h1><br><br>
+<h1 class="product-header">Our Specialities</h1><br><br>
 
-<div class="container_fluid">
+<div class="container">
   <div class="row">
-    <% @products.each do |product| %>
-      <div class="col-sm-2 col-md-4 product-style">
-
-        <%= image_tag(product.image_url, class:"img-responsive") %>
-
-        <a href="#"><h2><%= product.name %></h2>
-        <p><%= product.description %></p>
-        <p>Type of Food: <%= product.food_type %></p>
-        <p><strong>Price: <%= product.price %></strong> €</p>
-        <br>
-        <p><%= link_to 'Show', product %>
-        <%= link_to 'Edit', edit_product_path(product) %>
-        <%= link_to 'Destroy', product, method: :delete, data: { confirm: 'Are you sure?' } %> </p> <br> <br>
-      </div> <!-- end column -->
-    <% end %>
+    <%= render @products %>
   </div>  <!-- end Row -->
 </div>  <!-- end Container -->
 

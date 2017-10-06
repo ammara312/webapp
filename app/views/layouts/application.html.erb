@@ -14,10 +14,11 @@
      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <%= csrf_meta_tags %>
 
+
   </head>
 
   <body>
-		<nav class="navbar navbar-default">
+		<nav class="navbar navbar-default main-navbar">
 		  <div class="container-fluid">
 		    <!-- Brand and toggle get grouped for better mobile display -->
 		    <div class="navbar-header">
@@ -27,7 +28,7 @@
 		        <span class="icon-bar"></span>	
 		        <span class="icon-bar"></span>
 		      </button>
-		      <a class="navbar-brand projectname" href="#">@Bakery</a>
+		      <a class="navbar-brand projectname foodie" href="#">@ Foodie</a>
 		    </div>
 		    <!-- for image -->
 		    <!--  <a class="navbar-brand" href="#">
@@ -36,7 +37,7 @@
 		    <!-- Collect the nav links, forms, and other content for toggling -->
 		    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
 		      <ul class="nav navbar-nav navbar-right">
-		        <li><a href="#">Home <span class="sr-only">(current)</span></a></li>
+		        <li><%= link_to 'Home',root_path %> <span class="sr-only">(current)</span></a></li>
 		        <li class="dropdown">
 		          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Offers<span class="caret"></span></a>
 		          <ul class="dropdown-menu">
@@ -47,12 +48,13 @@
 		            <li><a href="#">Separated link</a></li>   
 		          </ul>
 		        </li>
-		        <li><a href="#">Our Creations</a></li>
-		        <li><a href="#">About</a></li>
-		        <li><a href="#">Bakery</a></li>
+		        
+<!-- 		        <li><a href=link_to "product">Specialities</a></li>
+ -->		    <li><%= link_to 'Products', products_path %></li>	
 		        <li><a href="#">Catering</a></li>
 		        <li><a href="#">Parties</a></li>
-		 				<li><a href="#">Contact</a></li>
+		        <li><%= link_to 'About',static_pages_about_path %></li>
+		 				<li><%= link_to 'Contact',static_pages_contact_path %></li>
 		        <li><a href="#">FAQ</a></li>
 		      </ul>
 		    </div><!-- /.navbar-collapse -->
@@ -66,18 +68,17 @@
 	<div class="container text-center">
 		<div class="row footerrow">
 			<div class="col-lg-12 footer-menu">
-				<span class="pull-left">Copyright © 2017 @Bakery. All Rights Reserved. | Made by <a
+				<span class="pull-left">Copyright © 2017 @Foodie. All Rights Reserved. | Made by <a
 					href="http://smartsoftwares.de"> Ammara Irfan</a></span>		
             <span class="pull-right">
-              <a href="#">Home</a>
-              <a href="#">Our Creations</a>
-		          <a href="#">About</a>
-		        	<a href="#">Bakery</a>
+              <%= link_to 'Home',root_path %>
+		        	<%= link_to 'Products', products_path %>
 		        	<a href="#">Catering</a>
 		        	<a href="#">Parties</a>
-		 					<a href="#">Contact</a>
-		        	<a href="#">FAQ</a>
-            </span>
+			        <%= link_to 'About',static_pages_about_path %>
+			 				<%= link_to 'Contact',static_pages_contact_path %>
+			        <a href="#">FAQ</a>
+	          </span>
 			</div>
 		</div>
 <!-- 		<a href="https://www.facebook.com/ammara.inayat" class="fa fa-facebook icon"></a>
@@ -85,8 +86,5 @@
 	</div>
 </footer>
 <!-- End Footer -->
-
-
-
-  </body>
+</body>
 </html>

@@ -7,31 +7,44 @@
 	font-family: 'Roboto', cursive,helvetica, arial, sans-serif;
 
 }
+.product-style{
+  padding-bottom: 30px;
+
+}
 
 .product-style a:hover{
 	color:black;
+  background-color: #fff;
 	text-decoration: none;
+}
+
+.product-style a:visited{
+  color:black;
+}
+
+.product-row{
+  padding-bottom: 30px;
 }
 /*for text moving pattern*/
 .product-style h2{
 	font: 100 1em; 
-  animation: myAnimationName 3s ease 1s 6 alternate backwards;
+  animation: ProductStyleAnimate 3s ease 1s 6 alternate backwards;
 }
-@keyframes myAnimationName {
+@keyframes ProductStyleAnimate {
   100% {
     text-indent: 10%;
   }
 }
 
 
-/*for animation */
+/*for animation of product header */
 
 .product-header {
 	text-align: center;
-  animation: myAnimation 5s ease 1s 12 alternate forwards;
+  animation: ProHeaderAnimate 5s ease 1s 12 alternate forwards;
 }
 
-@keyframes myAnimation {
+@keyframes ProHeaderAnimate {
   33% {
     text-shadow: 2px 2px 2px red;
   }
@@ -41,4 +54,10 @@
   100% {
     text-shadow: 0px 0px 10px green;
   }
+}
+
+.product-data{
+  height: 250px;
+  padding: 20px;
+  font-size: 2.5em;
 }

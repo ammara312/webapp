@@ -62,3 +62,6 @@ end
 group :development, :test do
   gem 'sqlite3'
 end
+
+#for yooming in the product page
+gem 'elevatezoom-rails'
