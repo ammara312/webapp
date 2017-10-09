@@ -1,9 +1,0 @@
-warning: xpath.c has type 100755, expected 100644
-warning: result/XPath/xptr/vidbase has type 100755, expected 100644
-/media/inayat/Shared drive/CFD/Ruby/webapp/vendor/bundle/ruby/2.3.0/gems/nokogiri-1.8.0/patches/libxml2/0002-Fix-XPointer-paths-beginning-with-range-to.patch:43: new blank line at EOF.
-+
-warning: test/XPath/xptr/vidbase has type 100755, expected 100644
-warning: xpath.c has type 100755, expected 100644
-warning: xpointer.c has type 100755, expected 100644
-warning: 1 line adds whitespace errors.
-warning: xpointer.c has type 100755, expected 100644

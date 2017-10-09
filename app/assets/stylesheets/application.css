@@ -23,3 +23,32 @@ body{
 	margin-bottom: 0px;
 	border: 0px;
 }
+
+.about-page{
+	font-family: 'Roboto', cursive,helvetica, arial, sans-serif;
+	color: #696969;
+	font-weight: 900; 
+}
+
+.contact-header{
+	text-align: center;
+	font-family: 'Roboto', cursive,helvetica, arial, sans-serif;
+}
+
+
+.form-control{
+	width: 100%;
+}
+
+/*for send message button on contact us page*/
+.send-message{
+	color: #fff;
+  background-color: black;
+  border-radius: 19%;
+  border-color: #fff;
+  border: 2px dotted;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+	cursor: pointer;
+	resize: none; 	
+}
