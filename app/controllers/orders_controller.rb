@@ -1,14 +1,11 @@
 class OrdersController < ApplicationController
 	def index
-	end
-
-	def show
-	end
-
-	def new
+		redirect_to "/orders/index"
 	end
 
 	def create
+				redirect_to "/orders/show"
+
 	end
 
 	def destroy
