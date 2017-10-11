@@ -64,3 +64,13 @@ body{
   	font-size: 20px;
   }
 }
+/*for form search field
+*/.search-form{
+	padding-top: 5px;
+}
+
+
+/*for making the button of search a bit smaller to adjust the size
+*/.btn-padding{
+	padding: 4px;
+}

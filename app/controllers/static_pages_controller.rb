@@ -3,8 +3,8 @@ class StaticPagesController < ApplicationController
   # 	@products = Product.limit(3)
   # end
 	
-def landing_page
-  @products = Product.limit(4)
-end
+	def landing_page
+	  @products = Product.limit(4)
+	end
 
 end
