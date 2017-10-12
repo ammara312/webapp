@@ -56,9 +56,13 @@
             <li><a href="#">Login</a></li>
 		      </ul>
 
-        <%= form_with(url: products_path, method: 'get', class:"navbar-form navbar-right search-form",local: true) do |form| %>
-          <%= form.text_field :q, id: 'q', value: params[:q] %>
-          <%= form.submit 'Search', class: "btn btn-success btn-padding" %>
+      <%= form_with(url: products_path, method: 'get', class:"navbar-form navbar-right search-form",local: true) do |form| %>
+          <%= form.text_field :q, id: 'q', value: params[:q], placeholder:'Search...', class: "form-control search-box"%>
+<!--           <%= form.submit 'Search', class: "btn btn-success btn-padding" %>
+ -->          
+          <%= button_tag(type: "submit", class: "btn btn-primary search-button") do %>
+            <span class="glyphicon glyphicon-search"></span>
+          <% end %>           
         <% end %>
       </div><!-- /.navbar-collapse -->
 		</div><!-- /.container-fluid -->

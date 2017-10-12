@@ -13,7 +13,8 @@ Rails.application.routes.draw do
   #root 'static_pages#index'
   root 'static_pages#landing_page'
   
-
+  post 'static_pages/thank_you'
+  
   resources :orders, only: [:index, :show, :create, :destroy]
 
   # get '/orders', to: 'orders#index'

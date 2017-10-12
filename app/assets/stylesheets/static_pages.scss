@@ -99,6 +99,40 @@ footer .footer-menu a:hover {
   margin-right: -15px;
   margin-left: -15px;
   }
+/*for contact page............................................
+*/
+.contact-form{
+  margin: 0 auto;
+  padding-top: 40px;
+}
+
+textarea.form-control.message-box{
+  height: 200px;
+}
+
+/*for send message button on contact us page*/
+.send-message{
+  color: #fff;
+  background-color: black;
+  border-radius: 19%;
+  border-color: #fff;
+  border: 2px dotted;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+  cursor: pointer;
+  resize: none;   
+}
+
+
+
+
+
+
+
+
+
+
+
 
 
 @media only screen and (max-width: 500px) {

@@ -1,51 +1,35 @@
-<header><h1 class="contact-header">Contact Us</h1></header>
+
+<div class="container contact-form">
+  <header>
+    <h1 class="contact-header">Contact Us</h1>
+  </header>
+
+<%= flash[:notice] %>
+<%= form_with(url: "/static_pages/thank_you") do |form| %>
 
 
-
-<div class="container-fluid" id="contact">
-  <div class="row"> <!-- 1st row start-->
-    <div class="col-md-12 contact-header main-part">
-      <p>If you have any questions feel free to contact us, our team will mainly reply you within 24 hours. <br></p>
-    </div>  <!-- end header column --> 
-  </div> <!-- end 1st row -->
   
-  <div class="row"> <!-- 2nd row start  -->
-     <div class="col-xs-12 col-sm-9 col-md-8">
-      <form> <!-- action="https://formspree.io/ammarainayat@gmail.com" method="post">-->
-        <div class="form-group">
-          <label for="name">Name:</label>
-          <input class="form-control" placeholder="Enter your name..." type="text" name="name" minlength="3" id="name" required="required" title="please enter your name" >
-          <p id="person-name"></p> <!-- used for scripting only -->
-        </div><!-- end class form-group for name field --> 
+  <div class="row">
+    <div class="col-md-5">
+      <div class="form-group">
+        <%= form.label :name %>
+        <%= form.text_field :name, class: "form-control", placeholder: "Enter Name", :required => true %>
+      </div>        
+      <div class="form-group">
+        <%= form.label :email, "Email Address" %>
+        <%= form.text_field :email, class: "form-control", placeholder: "Enter Email", :required => true %>
+      </div>
+      <div class="form-group">
+        <%= form.label :message %>
+        <%= form.text_area :message, class: "form-control message-box", placeholder: "Enter Message", :required => true  %>
+      </div>        
+    </div> <!-- col end -->
+  </div> <!-- row ends -->
+  <%= form.submit "Send",  class: "btn btn-primary send-message" %>  
+  <br><br><br> 
 
-        <div class="row">
-          <div class="col-md-6">
-            <div class="form-group">
-              <label for="email">Email:</label>
-              <input class="form-control" placeholder="Enter your email..."  type="email" name="email" id="email" required="required" title="please enter a valid email address" >
-              <!-- <p id = person-email></p> --><!--  for scripting only -->
-            </div> <!-- end form-group for email -->
-         </div> <!-- end column nested -->
-          <div class="col-md-6 number">
-            <div class="form-group">
-                <label for="phone">Phone:</label>
-                <input class="form-control" placeholder="Phone no. (optional)" type="tel" name="phone" id="fone" title="Phone number">
-                <p id="person-fone" ></p>
-            </div> <!-- end form-group for phone -->
-          </div><!-- end nested column for phone -->
-        </div> <!-- end row  -->
+<% end %>
 
-
-        <div class="form-group">
-          <label class="sr-only" for="message">Your Message</label>
-          <textarea class="form-control message-box" id="message" placeholder="Your message goes here" name="message" cols="40" rows="5" title="Type your message here"></textarea>
-
-        </div>
-        <button type="submit" class="btn btn-default send-message" id="button" >Send Message</button><br><br>
-      </form>
-    </div> <!-- end column -->
-  </div> <!-- end 2nd row -->
-  <br><br>
   <div class="row"> <!-- start 3rd row -->
     <div class="col-xs-12 col-sm-3 col-md-4 address">
       <p>
@@ -61,7 +45,7 @@
         <span class="glyphicon glyphicon glyphicon-phone-alt" aria-hidden="true"></span>
         004917612121212<br>
         <span class="glyphicon glyphicon glyphicon-print"></span>
-        Fax no:   14758962145<br>
+        Fax no:   14758962145<br><br>
       </p>
     </div><!-- end column -->
   </div><!-- end row -->
