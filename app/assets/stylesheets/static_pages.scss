@@ -123,9 +123,22 @@ textarea.form-control.message-box{
   resize: none;   
 }
 
+.bgthank{
+  background-image: url('/assets/Foodie.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: 900px;
+  opacity: 0.4;
+}
 
+.thanksmsg{
+  padding-top: 60px;
+  text-align: center;
+  color: white;
+  font-family: 'Roboto', cursive,helvetica, arial, sans-serif;
+  font-size: 25px;
 
-
+}
 
 
 
