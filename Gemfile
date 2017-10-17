@@ -65,3 +65,7 @@ end
 
 #for yooming in the product page
 gem 'elevatezoom-rails'
+
+#for sending emails through sndgrid 
+gem 'sendgrid-ruby'
+gem 'devise'
