@@ -70,9 +70,12 @@ body{
 	text-align: center;
 }
 
-
-
-
+/*for setting the display alert message 
+*/
+.alert-message {
+	text-align: center;
+	margin-bottom: 0px;
+}
 
 
 
