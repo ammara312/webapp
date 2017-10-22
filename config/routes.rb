@@ -1,9 +1,14 @@
 Rails.application.routes.draw do
   devise_for :users, path: '', path_names: { sign_in: 'login', sign_out: 'logout' }
- 
+   
+
+  #nested resources allow us to connect comments to products
+  resources :products do
+    resources :comments
+  end
   resources :users
-  resources :products, :invoices, :orders
-  resources :users, only: [:new, :create, :edit, :update, :destroy]
+  # , only: [:new, :create, :edit, :update, :destroy]
+
 
   get 'static_pages/about'
 

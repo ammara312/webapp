@@ -1,5 +1,5 @@
 <p id="notice"><%= notice %></p>
-<div class="container-fluid">
+<div class="container product-container">
   <div class="row product-row">
     <div class="col-xs-12 col-md-6 thumbnail">
       <%= image_tag(@product.image_url, class: "img-responsive") %>
@@ -8,12 +8,19 @@
       <h1 class="product_title"><%= @product.name %></h1>
       <div><p><%= @product.description %></p></div>
       <div><p><%= @product.price %>  €</p></div>
+      <p>Average Rating: <div class="rated" data-score="<%= @product.average_rating %>"></div> </p>
     </div>
   </div> <!-- end row -->
+  <%= link_to 'Edit', edit_product_path(@product) %> |
+  <%= link_to 'Back', products_path %>
+  <br>
+
+  <%= @product.highest_rating_comment %>
+  <%= @product.lowest_rating_comment %>
+
+  <!-- This partial will display a form for creating a new comment on a product (if a user is signed in) -->
+  <%= render 'new_comment' %>
+  <!-- And then we can add another partial which will display the listing of reviews-->
+  <%= render 'comments' %>
+
 </div> <!-- end container -->
-
-<%= @product.highest_rating_comment %>
-<%= @product.lowest_rating_comment %>
-
-<%= link_to 'Edit', edit_product_path(@product) %> |
-<%= link_to 'Back', products_path %>
