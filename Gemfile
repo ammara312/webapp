@@ -63,9 +63,11 @@ group :development, :test do
   gem 'sqlite3'
 end
 
-#for yooming in the product page
+#for zooming in the product page
 gem 'elevatezoom-rails'
 
 #for sending emails through sndgrid 
 gem 'sendgrid-ruby'
 gem 'devise'
+#CanCanCan is an authorization library for Ruby which restricts what resources a given user is allowed to access.
+gem 'cancancan', '~> 2.0'

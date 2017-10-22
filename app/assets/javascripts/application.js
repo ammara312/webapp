@@ -15,4 +15,3 @@
 //= require jquery3
 //= require_tree .
 // Alerts Fade Out
-

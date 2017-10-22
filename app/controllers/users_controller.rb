@@ -1,5 +1,9 @@
 class UsersController < ApplicationController
+  #This is called a filter it means before any action is run in this controller, 
+  #call the method set_user
   before_action :set_user, only: [:show, :edit, :update, :destroy]
+  before_action :authenticate_user!, except: [:show, :index]
+  load_and_authorize_resource
 
   # GET /users
   # GET /users.json
