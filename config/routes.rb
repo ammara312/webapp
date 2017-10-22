@@ -6,7 +6,8 @@ Rails.application.routes.draw do
   resources :products do
     resources :comments
   end
-  resources :users, only: [:new, :create, :edit, :update, :destroy]
+  resources :users
+  # , only: [:new, :create, :edit, :update, :destroy]
 
 
   get 'static_pages/about'
