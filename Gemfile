@@ -8,8 +8,6 @@ end
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '~> 5.1.2'
-# Use sqlite3 as the database for Active Record
-gem 'pg'
 # Use Puma as the app server
 gem 'puma', '~> 3.7'
 # Use SCSS for stylesheets
@@ -71,3 +69,5 @@ gem 'sendgrid-ruby'
 gem 'devise'
 #CanCanCan is an authorization library for Ruby which restricts what resources a given user is allowed to access.
 gem 'cancancan', '~> 2.0'
+# for pagination purpose...
+gem 'will_paginate', '~> 3.1.1'

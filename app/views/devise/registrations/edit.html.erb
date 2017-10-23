@@ -17,6 +17,21 @@
 
     <div class="col-sm-4 col-md-offset-4">
       <div class="form-group">
+        <%= f.label :first_name %>
+        <%= f.text_field :first_name, autofocus: true, required: true, class:"form-control", placeholder:"First Name"  %>
+      </div>
+    </div>
+
+    <div class="col-sm-4 col-md-offset-4">
+      <div class="form-group">
+        <%= f.label :last_name %>
+        <%= f.text_field :last_name, autofocus: true, required: true, class:"form-control", placeholder:"Last Name"  %>
+      </div>
+    </div>
+
+    
+    <div class="col-sm-4 col-md-offset-4">
+      <div class="form-group">
         <%= f.label :password, hidden: true  %> <i>(leave blank if you don't want to change it)</i><br />
         <%= f.password_field :password, autocomplete: "off", class:"form-control", placeholder:"Password" %>
         <% if @minimum_password_length %>
