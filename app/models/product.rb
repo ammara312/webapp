@@ -1,7 +1,7 @@
 class Product < ApplicationRecord
   validates :name, presence: true	
 	has_many :orders
-	has_many :comments
+	has_many :comments 
 
 	def self.search(search_term)
 		# for rails production environment
@@ -16,9 +16,9 @@ class Product < ApplicationRecord
 	def lowest_rating_comment
 	  comments.rating_asc.first
 	end
-	
+
 	def average_rating
-  	comments.average(:rating).to_f
+		comments.average(:rating).to_f
 	end
 end
 
