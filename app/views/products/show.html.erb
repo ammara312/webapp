@@ -2,7 +2,7 @@
 <div class="container product-container">
   <div class="row product-row">
     <div class="col-xs-12 col-md-6 thumbnail">
-      <%= image_tag(@product.image_url, class: "img-responsive") %>
+      <%= image_tag(@product.image_url, class: "img-responsive zoom-image", data_zoom_image: @product.image_url) %>
     </div> <!-- end column -->
     <div class="col-xs-12 col-md-6">
       <h1 class="product_title"><%= @product.name %></h1>
@@ -15,12 +15,16 @@
   <%= link_to 'Back', products_path %>
   <br>
 
-  <%= @product.highest_rating_comment %>
-  <%= @product.lowest_rating_comment %>
+  <%#= <%= @product.highest_rating_comment %>
+  <%#= %= @product.lowest_rating_comment %>
 
   <!-- This partial will display a form for creating a new comment on a product (if a user is signed in) -->
   <%= render 'new_comment' %>
   <!-- And then we can add another partial which will display the listing of reviews-->
   <%= render 'comments' %>
+  <!-- for comments pagination
+ -->  <div class="pagination flickr_pagination">
+    <%= will_paginate @comments %> 
+  </div>
 
 </div> <!-- end container -->
