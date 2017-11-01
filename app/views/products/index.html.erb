@@ -1,5 +1,3 @@
-<p id="notice"><%= notice %></p>
-
 <div class="add-new-btnProduct">
   <% if current_user && current_user.admin? %>
     <%= link_to "Add New Product", new_product_path, class: "btn btn-primary btn-colr" %>
