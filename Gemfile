@@ -59,6 +59,7 @@ end
 #declared inside a development/test block to ensure that it only compiles in the development or test environments
 group :development, :test do
   gem 'sqlite3'
+  gem 'rspec-rails', '~> 3.6' #for testing in rails 
 end
 
 #for zooming in the product page
