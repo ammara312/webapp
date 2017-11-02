@@ -13,6 +13,10 @@
  *= require_tree .
  *= require_self
  */
+/*SCSS variables...defined once and used repetitivley*/
+
+$font-stack: 'Roboto', cursive,helvetica, arial, sans-serif;
+
 body{
 	margin: 0px;
 	padding-top: 50px;
@@ -25,14 +29,14 @@ body{
 }
 
 .about-page{
-	font-family: 'Roboto', cursive,helvetica, arial, sans-serif;
+	font-family: $font-stack;
 	color: #696969;
 	font-weight: 900; 
 }
 
 .contact-header{
 	text-align: center;
-	font-family: 'Roboto', cursive,helvetica, arial, sans-serif;
+	font-family: $font-stack;
 }
 
 
