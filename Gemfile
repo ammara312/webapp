@@ -60,6 +60,7 @@ end
 group :development, :test do
   gem 'sqlite3'
   gem 'rspec-rails', '~> 3.6' #for testing in rails 
+  gem "factory_bot_rails", "~> 4.0"
 end
 
 #for zooming in the product page
