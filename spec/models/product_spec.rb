@@ -2,8 +2,8 @@ require 'rails_helper'
 
 describe Product do
 	before do
-		@product =Product.create!(name: "khana") 
-		@user = User.create!(first_name: "hello", last_name:"world",email: "testing@live.com", password: "123456")
+		@product =FactoryBot.create(:product)
+		@user = FactoryBot.create(:user)
 		#we can create associated models by simply using dot notation
 	  @product.comments.create!(rating: 1, user: @user, body: "not good at all!")
 	  @product.comments.create!(rating: 3, user: @user, body: "it was OK!")
