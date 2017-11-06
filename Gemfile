@@ -72,3 +72,5 @@ gem 'devise'
 gem 'cancancan', '~> 2.0'
 # for pagination purpose...
 gem 'will_paginate', '~> 3.1.1'
+#The rails-controller-testing gem provides the assigns and assert_template
+gem 'rails-controller-testing'
