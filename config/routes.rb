@@ -35,5 +35,5 @@
 
   # get '/orders', to: 'orders#index'
   # get '/orders', to: 'orders#show'
- 
+
 end
