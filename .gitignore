@@ -20,7 +20,7 @@
 /node_modules
 /yarn-error.log
 
-
+/vendor
 .byebug_history
 sendgrid.env
 sendgrid.env
