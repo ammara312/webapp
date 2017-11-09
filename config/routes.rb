@@ -28,12 +28,13 @@
   root 'static_pages#landing_page'
   
   post 'static_pages/thank_you'
-  get 'payments/create'
+#  get 'payments/create'
   post 'payments/create'
-  get 'product/index'
+#  get 'product/index'
   resources :orders, only: [:index, :show, :create, :destroy]
 
   # get '/orders', to: 'orders#index'
   # get '/orders', to: 'orders#show'
 
 end
+  

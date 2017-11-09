@@ -10,7 +10,7 @@
       <p>Average Rating: <div class="rated" data-score="<%= @product.average_rating %>"></div> </p>
       <%#= add a new form element and render the Stripe button partial inside it for payment%>
 
-        <%= form_tag(url: '/payments/create') do |form| %>
+        <%= form_tag('/payments/create', method: :post) do |form| %>
           <%= render partial: "shared/stripe_checkout_button" %>
         <% end %>
 
