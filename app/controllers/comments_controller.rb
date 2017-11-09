@@ -6,7 +6,7 @@ class CommentsController < ApplicationController
     @comment.user = current_user
     @comment.save
     respond_to do |format|
-      # (byebug)
+       (byebug)
       if @comment.save
         format.html { redirect_to @product, notice: 'Review was created successfully.' }
         format.json { render :show, status: :created, location: @product }
