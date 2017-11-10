@@ -4,3 +4,4 @@ $( document ).on('turbolinks:load ajaxSuccess', function() {
   $(".zoom-image").elevateZoom();
 });
 
+
