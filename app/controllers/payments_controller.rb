@@ -1,7 +1,13 @@
 class PaymentsController < ApplicationController
 	def create
 		token = params[:stripeToken]
+		if user_signed_in?
+      @user = current_user
+    else
+    	redirect_to  new_user_registration_path	
+    end
 		@product = Product.find(params[:product_id])
+
 		@user = current_user
 	  # Create the charge on Stripe's servers - this will charge the user's card
 	  begin

@@ -2,6 +2,11 @@ class CommentsController < ApplicationController
 
   def create
     @product = Product.find(params[:product_id])
+    # if user_signed_in?
+    #   @user = current_user
+    # else
+    #   redirect_to new_user_registration_path
+
     @comment = @product.comments.new(comment_params)
     @comment.user = current_user
     @comment.save
