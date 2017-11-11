@@ -1,5 +1,6 @@
-// initialize the plugin on for rating
-$(document).on('turbolinks:load', function(){
+var refreshRating = function() {
+  // initialize the plugin on for rating
+
   $('.rating').raty({
     starHalf: '<%= asset_path 'star-half.png' %>',
     starOff: '<%= asset_path 'star-off.png' %>',
@@ -16,4 +17,11 @@ $(document).on('turbolinks:load', function(){
       return $(this).attr('data-score');
     }
   });
+};
+
+//Turbolinks speed up the page load time when traveling around the different pages
+$( document ).on('turbolinks:load ajaxSuccess', function() {
+  $(".alert, .notice").delay(1500).fadeOut(1000);
+  $(".zoom-image").elevateZoom();
+  refreshRating();
 });
