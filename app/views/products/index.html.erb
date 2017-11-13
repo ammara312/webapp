@@ -7,7 +7,11 @@
 <h1 class="product-header">Our Specialities</h1><br><br>
 <div class="container">
   <div class="row">
-    <%= render @products %>
+<!--     Russian doll caching  -->
+    <% cache(cache_key_for_products) do %>
+      <%= render @products %>
+    <% end %>
+
   </div>  <!-- end Row -->
 </div>  <!-- end Container -->
 <br>
