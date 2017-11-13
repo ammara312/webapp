@@ -77,3 +77,4 @@ gem 'will_paginate', '~> 3.1.1'
 gem 'rails-controller-testing'
 #for payments etc
 gem 'stripe'
+gem 'dalli'
