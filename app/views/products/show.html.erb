@@ -40,12 +40,5 @@
   <%= render 'comments' %>
   <!-- for comments pagination
  -->  <div class="pagination flickr_pagination">
-    <%= will_paginate @comments %> 
-            <div><h6 class="viewed"> Views:
-          <span class="badge">
-            <%= @product.views%>
-          </span>
-        </h6></div>
-  </div>
-
+    <%= will_paginate @comments %>
 </div> <!-- end container -->
