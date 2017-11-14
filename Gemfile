@@ -78,3 +78,4 @@ gem 'rails-controller-testing'
 #for payments etc
 gem 'stripe'
 gem 'dalli'
+gem 'redis-rails'
