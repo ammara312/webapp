@@ -36,16 +36,11 @@
 
   <!-- This partial will display a form for creating a new comment on a product (if a user is signed in) -->
   <%= render 'new_comment' %>
+  <!-- alert for the new mesage posted just like a chat  -->
+  <div class="alert alert-info" style="display:none" role="alert">A new comment was posted!</div>
   <!-- And then we can add another partial which will display the listing of reviews-->
   <%= render 'comments' %>
   <!-- for comments pagination
  -->  <div class="pagination flickr_pagination">
-    <%= will_paginate @comments %> 
-            <div><h6 class="viewed"> Views:
-          <span class="badge">
-            <%= @product.views%>
-          </span>
-        </h6></div>
-  </div>
-
+    <%= will_paginate @comments %>
 </div> <!-- end container -->

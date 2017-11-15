@@ -36,5 +36,8 @@
   # get '/orders', to: 'orders#index'
   # get '/orders', to: 'orders#show'
 
+  #for actiona
+  mount ActionCable.server => '/cable'
+
 end
   
