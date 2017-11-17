@@ -1,6 +1,6 @@
 <div class="container product-container">
 
-    <div class="row product-row">
+    <div class="row product-row" data-product-id="<%= @product.id %>">
       <div class="col-xs-12 col-md-6 thumbnail">
         <%= image_tag(@product.image_url, class: "img-responsive zoom-image", data_zoom_image: @product.image_url) %>
       </div> <!-- end column -->
@@ -38,6 +38,7 @@
   <%= render 'new_comment' %>
   <!-- alert for the new mesage posted just like a chat  -->
   <div class="alert alert-info" style="display:none" role="alert">A new comment was posted!</div>
+
   <!-- And then we can add another partial which will display the listing of reviews-->
   <%= render 'comments' %>
   <!-- for comments pagination
