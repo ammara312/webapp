@@ -20,10 +20,11 @@ class PaymentsController < ApplicationController
 	    )
 	    if charge.paid
 	    	Order.create(
-	    		product_id: @product.id,
-          user_id: @user.id,
-          total: @product.price
-          ) #create is for both new and save
+    		product_id: @product.id,
+        user_id: @user.id,
+        total: @product.price
+        ) #create is for both new and save
+        UserMailer.payment_confirmation(@user, @product).deliver_now
   		end
 	    
 	  #for checking if the payment is ok with stripe
@@ -33,6 +34,6 @@ class PaymentsController < ApplicationController
 	    err = body[:error]
 	    flash[:error] = "Unfortunately, there was an error processing your payment: #{err[:message]}"
 	  end
-	  	redirect_to product_path(@product)
+	  	redirect_to product_path(@product), notice: "Payment was processed successfully"
 	end
 end
