@@ -1,6 +1,7 @@
 <div class="container product-container">
 
-    <div class="row product-row" data-product-id="<%= @product.id %>">
+  <div class="row product-row" data-product-id="<%= @product.id %>">
+    <% cache @product do %>
       <div class="col-xs-12 col-md-6 thumbnail">
         <%= image_tag(@product.image_url, class: "img-responsive zoom-image", data_zoom_image: @product.image_url) %>
       </div> <!-- end column -->
@@ -20,6 +21,7 @@
             <%= render partial: "shared/stripe_checkout_button" %>
           <% end %>
       </div>
+    <% end %>  
   </div> <!-- end row -->
   
   <div class="product-show-btn">
