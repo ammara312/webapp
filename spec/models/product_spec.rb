@@ -17,14 +17,5 @@ describe Product do
 	it "is not valid without a name" do
 	  expect(Product.new(description:"Nice curry")).not_to be_valid
 	end
-
-  context "when the product has no name" do
-	  product = FactoryBot.build(:product)
-	  product.name = ""
-	  
-	  it "should not be valid" do
-	    expect(product).not_to be_valid
-  	end
-	end
 end
 
