@@ -7,7 +7,7 @@
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
     <!-- We'll link our Bootstrap JavaScript file, as well, after the javascript_include_tag because Bootstrap depends on jQuery, which is loaded with all the other JavaScript
- -->
+    -->
  		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
  		<meta name="viewport" content="width=device-width, initial-scale=1">
  		<!-- For social media button -->
@@ -15,7 +15,7 @@
     <%= csrf_meta_tags %>
 	</head>
 
- <body>
+  <body>
 		<nav class="navbar navbar-default navbar-fixed-top main-navbar">
 		  <div class="container-fluid">
 		    <!-- Brand and toggle get grouped for better mobile display -->
@@ -50,26 +50,18 @@
 		        </li> -->
 				    <li><%= link_to 'Products', products_path %></li>	
 		        <li><a href="#">Parties</a></li>
-            <li><%= link_to 'Orders',static_pages_about_path %></li>
 		        <li><%= link_to 'About',static_pages_about_path %></li>
 		 				<li><%= link_to 'Contact',static_pages_contact_path %></li>
 		        <li><a href="#">FAQ</a></li>
               <!-- In the example, if someone is logged in, they'll see a link to sign out. If no one is logged in, they'll see a link to sign in -->
             <ul class="nav navbar-nav navbar-right pull-right">
-              <li>
-               <% if user_signed_in? %>
-                 <%= link_to 'Edit', edit_user_registration_path %>
-               <% else %>
-                 <%= link_to('Sign Up', new_user_registration_path) %>
-               <% end %>
-             </li>
-              <li>
-                <% if user_signed_in? %>
-                  <%= link_to('Logout', destroy_user_session_path, :method => :delete) %>
-                <% else %>
-                  <%= link_to('Login', new_user_session_path) %>
-                <% end %>
-              </li>
+             <% if user_signed_in? %>
+              <li><%= link_to 'Edit', edit_user_registration_path %></li> 
+              <li><%= link_to('Logout', destroy_user_session_path, :method => :delete) %></li>
+             <% else %>
+               <li><%= link_to('Sign Up', new_user_registration_path) %></li>
+               <li><%= link_to('Login', new_user_session_path) %></li>
+             <% end %>
             </ul>
 		      </ul>
           
@@ -100,24 +92,22 @@
     <%= yield %>
 
     <div class="bodypadding"></div>
-    <div class="container"></div>
+  <!--<div class="container"></div> -->
 		<!-- Start Footer -->
 		<footer id="footer">
 			<div class="container text-center">
 				<div class="row footerrow">
 					<div class="col-lg-12 footer-menu">
 						<span class="pull-left">Copyright © 2017 @Foodie. All Rights Reserved. | Made by <a href="http://smartsoftwares.de"> Ammara Irfan</a></span>		
-		          <span class="pull-right">
-		            <%= link_to 'Home',root_path %>
-			        	<%= link_to 'Products', products_path %>
-			        	<a href="#">Catering</a>
-			        	<a href="#">Parties</a>
-				        <%= link_to 'About',static_pages_about_path %>
-				 				<%= link_to 'Contact',static_pages_contact_path %>
-				        <a href="#">FAQ</a>
-
-
-		          </span>
+	          <span class="pull-right">
+	            <%= link_to 'Home',root_path %>
+		        	<%= link_to 'Products', products_path %>
+		        	<a href="#">Catering</a>
+		        	<a href="#">Parties</a>
+			        <%= link_to 'About',static_pages_about_path %>
+			 				<%= link_to 'Contact',static_pages_contact_path %>
+			        <a href="#">FAQ</a>
+	          </span>
 					</div>
 				</div>
 				<!-- 		<a href="https://www.facebook.com/ammara.inayat" class="fa fa-facebook icon"></a>

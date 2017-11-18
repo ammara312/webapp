@@ -15,5 +15,7 @@
 //= require jquery3
 //= require jquery_ujs
 //= require jquery.raty
-//= require_tree .
+//= require_tree 
+//= require jquery
+//= require jquery.elevateZoom-3.0.8.min
 //= Alerts Fade Out

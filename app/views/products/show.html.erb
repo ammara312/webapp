@@ -25,12 +25,12 @@
   </div> <!-- end row -->
   
   <div class="product-show-btn">
-  <%= link_to 'Back', products_path, class: "btn btn-primary btn-colr" %>
-  <% if current_user && current_user.admin? %>
-    <%= link_to 'Edit', edit_product_path(@product), class: 'btn btn-primary btn-colr' %>
-    <%= link_to 'Destroy', @product, method: :delete, data: { confirm: 'Are you sure?' }, class: 'btn btn-primary btn-colr' %>
-  <%end %> <!--  end cache -->
-  <br>
+    <%= link_to 'Back', products_path, class: "btn btn-primary btn-colr" %>
+    <% if current_user && current_user.admin? %>
+      <%= link_to 'Edit', edit_product_path(@product), class: 'btn btn-primary btn-colr' %>
+      <%= link_to 'Destroy', @product, method: :delete, data: { confirm: 'Are you sure?' }, class: 'btn btn-primary btn-colr' %>
+    <%end %> <!--  end cache -->
+    <br>
   </div>
 
   <%#= <%= @product.highest_rating_comment %>
@@ -43,7 +43,9 @@
 
   <!-- And then we can add another partial which will display the listing of reviews-->
   <%= render 'comments' %>
-  <!-- for comments pagination
- -->  <div class="pagination flickr_pagination">
+  <!-- for comments pagination-->  
+  <div class="pagination flickr_pagination">
     <%= will_paginate @comments %>
-</div> <!-- end container -->
+  </div> <!-- end container -->
+
+</div>

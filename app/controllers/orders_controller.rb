@@ -1,5 +1,5 @@
 class OrdersController < ApplicationController
-	before_action :authenticate_use
+	before_action :authenticate_user
 	def index
 	end
 
