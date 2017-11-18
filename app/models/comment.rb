@@ -1,6 +1,7 @@
 class Comment < ApplicationRecord
-	validates :body, presence: true
-  validates :user, presence: :true
+	# in rails 5 they are not needed anymore because when we say belongs to user it automatically done this
+  #validates :body, presence: true
+  #validates :user, presence: :true
   validates :product, presence: :true
   validates :rating, numericality: { only_integer: true }
 
