@@ -1,10 +1,11 @@
 require "rails_helper"
  
 describe Comment do
- context "when the comment has no rating" do
-	 it "is not valid a comment without rating" do 
-	   expect(Comment.new(body: "awesome food")).not_to be_valid
- end
+  context "when the comment has no rating" do
+  	it "is not valid a comment without rating" do 
+  	   expect(Comment.new(body: "awesome food")).not_to be_valid
+    end
+  end
 
 
  context "when the comment has no user" do

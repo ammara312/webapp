@@ -26,32 +26,5 @@ describe Product do
 	    expect(product).not_to be_valid
   	end
 	end
-
-  context "when the product has no description" do
-    product = FactoryBot.build(:product)
-    product.description = ""
-
-    it "should not be valid" do
-      expect(product).not_to be_valid
-    end
-  end
-
-  context "when the product has no image" do
-    product = FactoryBot.build(:product)
-    product.image_url = ""
-
-    it "should not be valid" do
-      expect(product).not_to be_valid
-    end
-  end
-
-  context "when the product has no price" do
-    product = FactoryBot.build(:product)
-    product.price = ""
-
-    it "should not be valid" do
-      expect(product).not_to be_valid
-    end
-  end
 end
 

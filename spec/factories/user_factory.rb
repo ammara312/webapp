@@ -7,4 +7,10 @@ FactoryBot.define do
     last_name "example"
     admin false
   end
+
+
+  factory :admin, parent: :user do
+	  id
+	  admin true
+  end
 end

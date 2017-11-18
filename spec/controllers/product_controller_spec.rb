@@ -18,7 +18,7 @@ describe ProductsController, :type => :controller do
 
   context 'POST #create' do
     it 'is an invalid product' do
-    @product = Factorybot.build(:product, name: "")
+    @product = FactoryBot.build(:product, name: "")
     expect(@product).not_to be_valid
     end
   end
@@ -35,7 +35,7 @@ describe ProductsController, :type => :controller do
       @attr = { :name => @product.name, :image_url => @product.image_url, :id => @product.id, :price => "17.99" }
       put :update, params: { :id => @product.id, :product => @attr }
       @product.reload
-      expect(@product.price).to eq 12.99
+      expect(@product.price).to eq 17.99
     end
   end
 
