@@ -1,54 +1,51 @@
 require 'rails_helper'
 
-describe ProductsController, :type => :controller do
+#index action
+describe ProductsController, type: :controller do
   context 'GET #index' do
-    before do
+    it 'renders the index page' do 
       get :index
-    end
-
-    it 'responds successfully with an HTTP 200 status code' do
-      expect(response).to be_success
-      expect(response).to have_http_status(200)
-    end
-
-    it 'renders the index template' do
+      expect(response).to be_ok
       expect(response).to render_template('index')
     end
   end
 
-  context 'POST #create' do
-    it 'is an invalid product' do
-    @product = Factorybot.build(:product, name: "")
-    expect(@product).not_to be_valid
-    end
-  end
-
-
-  context "PUT #update/:price" do
-    before do
+  #show action
+  context 'GET #show' do
+    it 'renders the show page' do 
       @product = FactoryBot.create(:product)
-      @user = FactoryBot.build(:admin)
+      get :show, params: {id: @product}
+      expect(response).to be_ok
+      expect(response).to render_template('show')
+    end
+  end  
+
+  # Create action
+  context "POST #create" do
+    before do 
+      @user = FactoryBot.build(:user)
       sign_in @user
     end
-
-    it "successfully updates product price" do
-      @attr = { :name => @product.name, :image_url => @product.image_url, :id => @product.id, :price => "17.99" }
-      put :update, params: { :id => @product.id, :product => @attr }
-      @product.reload
-      expect(@product.price).to eq 12.99
-    end
-  end
-
-  context "DELETE #destroy" do
-
-    before do
+    it "successfully creates new product" do  
       @product = FactoryBot.create(:product)
-      @user = FactoryBot.build(:admin)
+      expect(response).to be_successful
+    end
+    it "cannot create a product" do 
+       expect(Product.new(price:nil)).not_to be_valid
+    end  
+  end  
+
+
+  #delete action
+  context "delete" do 
+    before do 
+      @product = FactoryBot.create(:product)
+      @user = FactoryBot.create(:user)
       sign_in @user
     end
-
-    it "should allow admin to delete product" do
-      expect(delete :destroy, params: {:id => @product} ).to redirect_to(products_url)
+    it "allows admin to delete a product" do 
+      delete :destroy, params: {id: @product}
+      expect(response).to redirect_to products_path
     end
-  end
+  end 
 end
